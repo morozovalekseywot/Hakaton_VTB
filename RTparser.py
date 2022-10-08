@@ -21,16 +21,12 @@ def is_news(x):
 
 
 url = r"https://russian.rt.com/business"
-# url = r"https://russian.rt.com/world"
-# resp = requests.get(url)
 
 profile_path = r'C:\Users\Diablo\AppData\Roaming\Mozilla\Firefox\Profiles\x0prq2bw.default'
 options = Options()
 options.set_preference('profile', profile_path)
-# service = Service(r'D:\python\VTB_tricks\geckodriver.exe')
 driver = Firefox(options=options)
 driver.get(url)
-# button = driver.find_element_by_xpath("button__item button__item_listing")
 cookies = driver.find_element_by_xpath("/html/body/div[2]/div[7]/div/a")
 cookies.click()
 # button = driver.find_element_by_xpath("/html/body/div[2]/div[4]/div[3]/div/div/div[1]/div/div[2]/div/div/div/div/a")
